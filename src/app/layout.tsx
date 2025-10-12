@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { MobileNavbar } from "@/components/navbar/MobileNavbar";
+import { DesktopNavbar } from "@/components/navbar/DesktopNavbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,10 +27,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`w-[100dvw] h-[100dvh] m-0 p-0`}
       >
-        {children}
+        {/* destop navbar at left and mobile navbar at bottom  and main content in the center with responsive design */}
+        <div className="w-full h-full flex flex-col sm:flex-row">
+          <div className="w-[200px] h-full hidden sm:block">
+            <DesktopNavbar />
+          </div>
+          <main className="w-full sm:w-[calc(100%-200px)] h-[calc(100%-70px)] sm:h-full bg-blue-500">{children}</main>
+          <div className="w-full h-[70px] sm:hidden">
+            <MobileNavbar />
+          </div>
+        </div>
       </body>
-    </html>
+    </html >
   );
 }
