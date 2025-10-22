@@ -13,20 +13,25 @@ export function DesktopNavbar() {
     ];
 
     return (
-        <nav className="w-full h-full flex flex-col justify-center gap-3 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-700 p-2">
+        <nav
+            className="w-4/5 h-full rounded-full flex justify-center gap-1.5 bg-white dark:bg-[#1E293B] border border-[#E2E8F0] dark:border-[#334155] p-1.5 shadow-sm"
+            role="navigation"
+            aria-label="Main navigation">
             {
                 navItems.map((items) => (
-                    <div
+                    <button
                         key={items.id}
                         onClick={() => setActiveTab(items.id)}
-                        className={`w-full py-3 px-4 cursor-pointer flex gap-2 items-center rounded-lg transition-all duration-200
-                        ${activeTab === items.id
-                                ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
-                                : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800'
+                        aria-current={activeTab === items.id ? 'page' : undefined}
+                        className={`py-2.5 px-5 flex gap-2.5 items-center rounded-full transition-all duration-200 active:scale-[0.97]
+                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6] dark:focus-visible:ring-[#60A5FA] focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-[#1E293B]
+                ${activeTab === items.id
+                                ? 'text-white dark:text-[#0F172A] bg-[#3B82F6] dark:bg-[#60A5FA] shadow-sm'
+                                : 'text-[#475569] dark:text-[#CBD5E1] hover:text-[#0F172A] dark:hover:text-[#F8FAFC] hover:bg-[#F1F5F9] dark:hover:bg-[#334155]/60'
                             }`}>
-                        <items.icon className="w-5 h-5" />
-                        <span className="text-lg font-semibold">{items.label}</span>
-                    </div>
+                        <items.icon className="w-[18px] h-[18px]" strokeWidth={activeTab === items.id ? 2.5 : 2} />
+                        <span className="text-[15px] font-medium leading-none">{items.label}</span>
+                    </button>
                 ))
             }
         </nav>

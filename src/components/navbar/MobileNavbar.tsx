@@ -13,21 +13,50 @@ export function MobileNavbar() {
     ];
 
     return (
-        <nav className="w-full h-full grid grid-cols-4 gap-2 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 p-2">
+        // <nav className="w-full h-full grid grid-cols-4 gap-2 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 p-2">
 
+        //     {
+        //         navItems.map((items) => (
+        //             <div
+        //                 key={items.id}
+        //                 onClick={() => setActiveTab(items.id)}
+        //                 className={`w-full h-full col-span-1 flex flex-col items-center justify-center rounded-lg transition-all duration-200
+        //                 ${activeTab === items.id
+        //                         ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
+        //                         : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800'
+        //                     }`}>
+        //                 <items.icon className="w-5 h-5 mb-1" />
+        //                 <span className="text-xs font-medium">{items.label}</span>
+        //             </div>
+        //         ))
+        //     }
+        // </nav>
+
+        <nav
+            className="w-full h-full grid grid-cols-4 gap-1 bg-white dark:bg-[#1E293B] border-t border-[#E2E8F0] dark:border-[#334155] px-2 py-1.5"
+            role="navigation"
+            aria-label="Main navigation">
             {
                 navItems.map((items) => (
-                    <div
+                    <button
                         key={items.id}
                         onClick={() => setActiveTab(items.id)}
-                        className={`w-full h-full col-span-1 flex flex-col items-center justify-center rounded-lg transition-all duration-200
-                        ${activeTab === items.id
-                                ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
-                                : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800'
+                        aria-current={activeTab === items.id ? 'page' : undefined}
+                        className={`w-full h-full col-span-1 flex flex-col items-center justify-center rounded-xl transition-all duration-300 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3B82F6] dark:focus-visible:ring-[#60A5FA] focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-[#1E293B]
+                ${activeTab === items.id
+                                ? 'text-[#3B82F6] dark:text-[#60A5FA] bg-[#EFF6FF] dark:bg-[#1E3A8A]/20 scale-[0.98]'
+                                : 'text-[#64748B] dark:text-[#94A3B8] active:scale-95'
                             }`}>
-                        <items.icon className="w-5 h-5 mb-1" />
-                        <span className="text-xs font-medium">{items.label}</span>
-                    </div>
+                        <items.icon
+                            className={`w-6 h-6 mb-1 transition-transform duration-300 ${activeTab === items.id ? 'scale-110' : ''
+                                }`}
+                            strokeWidth={activeTab === items.id ? 2.5 : 2}
+                        />
+                        <span className={`text-[11px] font-medium transition-all duration-300 ${activeTab === items.id ? 'font-semibold' : ''
+                            }`}>
+                            {items.label}
+                        </span>
+                    </button>
                 ))
             }
         </nav>
