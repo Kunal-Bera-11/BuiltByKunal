@@ -29,11 +29,20 @@ export default function RootLayout({
         className={`w-[100dvw] h-[100dvh] m-0 p-0`}
       >
         {/* destop navbar at left and mobile navbar at bottom  and main content in the center with responsive design */}
-        <div className="w-full h-full flex flex-col sm:flex-row">
+        {/* <div className="w-full h-full flex flex-col sm:flex-row">
           <div className="w-[200px] h-full hidden sm:block">
             <DesktopNavbar />
           </div>
           <main className="w-full sm:w-[calc(100%-200px)] h-[calc(100%-70px)] sm:h-full bg-blue-500">{children}</main>
+          <div className="w-full h-[70px] sm:hidden">
+            <MobileNavbar />
+          </div>
+        </div> */}
+        <div className="w-full h-full bg-[#F1F5F9] dark:bg-[#0F172A]">
+          <div className="w-full h-[100px] hidden sm:flex justify-center py-4">
+            <DesktopNavbar />
+          </div>
+          <main className="w-full sm:h-[calc(100%-100px)] h-[calc(100%-70px)]">{children}</main>
           <div className="w-full h-[70px] sm:hidden">
             <MobileNavbar />
           </div>
