@@ -8,7 +8,7 @@ export default function ContactForm() {
                     Send Me a Message
                 </h3>
                 <p className="text-[0.875rem] sm:text-[0.9375rem] text-[#64748B] dark:text-[#94A3B8] leading-[1.5]">
-                    I'll get back to you as soon as possible!
+                    I&apos;ll get back to you as soon as possible!
                 </p>
             </div>
 
