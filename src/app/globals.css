@@ -62,3 +62,52 @@ body {
     animation: wave 2.5s infinite;
   }
 }
+
+@layer components {
+
+  /* Transparent overlay scrollbar for both modes */
+  .scrollbar-custom {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(120, 120, 130, 0.18) transparent;
+    /* Thumb and track for Firefox */
+  }
+
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background: rgba(120, 120, 130, 0.18);
+    /* Subtle thumb blend */
+    border-radius: 10px;
+    box-shadow: 0 0 1px 1px rgba(120, 120, 130, 0.07);
+    border: 2px solid transparent;
+    /* Prevent erasing border */
+    min-height: 44px;
+    transition: background 0.2s;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background: rgba(120, 120, 130, 0.32);
+    /* Slightly more visible on hover */
+  }
+
+  /* Dark mode: slightly bluer tint */
+  .dark .scrollbar-custom {
+    scrollbar-color: rgba(100, 130, 180, 0.16) transparent;
+  }
+
+  .dark .scrollbar-custom::-webkit-scrollbar-thumb {
+    background: rgba(100, 130, 180, 0.16);
+    box-shadow: 0 0 1px 1px rgba(100, 130, 180, 0.07);
+  }
+
+  .dark .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background: rgba(80, 130, 210, 0.28);
+  }
+}
