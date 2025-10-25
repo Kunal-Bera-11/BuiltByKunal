@@ -56,7 +56,7 @@ export default function WorkPage() {
                         Professional Experience
                     </h1>
                     <p className="text-[1rem] sm:text-[1.25rem] leading-[1.6] text-[#475569] dark:text-[#94A3B8] max-w-3xl mx-auto">
-                        Over the past 2+ years, I've contributed to 10+ production-grade platforms and multiple POCs — building AI-driven, scalable web interfaces that improve performance and user experience.
+                        Over the past 2+ years, I&apos;ve contributed to 10+ production-grade platforms and multiple POCs — building AI-driven, scalable web interfaces that improve performance and user experience.
                     </p>
                 </div>
 
@@ -127,7 +127,7 @@ export default function WorkPage() {
                 {/* Closing Statement */}
                 <div className="text-center py-8">
                     <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.6] font-medium text-[#0F172A] dark:text-[#F8FAFC] italic">
-                        "Every project I've worked on has reinforced one goal — to make web experiences faster, smarter, and more human."
+                        &quot;Every project I&apos;ve worked on has reinforced one goal — to make web experiences faster, smarter, and more human.&quot;
                     </p>
                 </div>
 
@@ -151,7 +151,7 @@ export default function WorkPage() {
                             className="px-6 py-3.5 backdrop-blur-sm bg-[#FFFFFF] dark:bg-[#1E293B]/60 text-[#0F172A] dark:text-[#F8FAFC] text-[0.9375rem] font-semibold rounded-full border-2 border-[#E2E8F0] dark:border-[#334155] hover:border-[#3B82F6] dark:hover:border-[#60A5FA] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
                         >
                             <span className="flex items-center justify-center gap-2">
-                                💬 Let's Connect
+                                💬 Let&apos;s Connect
                             </span>
                         </a>
                     </div>
