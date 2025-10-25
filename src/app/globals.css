@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --input-bg: #F1F5F9;
+  --input-text: #0F172A;
+  --focus-ring: #3B82F6;
 }
 
 @theme inline {
@@ -16,6 +20,10 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    --input-bg: #334155/50;
+    --input-text: #F8FAFC;
+    --focus-ring: #60A5FA;
   }
 }
 
@@ -60,6 +68,44 @@ body {
   .animate-wave {
     @apply inline-block;
     animation: wave 2.5s infinite;
+  }
+
+  @keyframes rocket-launch {
+
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+
+    10% {
+      transform: translate(6px, -6px);
+    }
+
+    20% {
+      transform: translate(0, 0);
+    }
+
+    30% {
+      transform: translate(9px, -9px);
+    }
+
+    40% {
+      transform: translate(0, 0);
+    }
+
+    50% {
+      transform: translate(12px, -12px);
+    }
+
+    60% {
+      transform: translate(0, 0);
+    }
+  }
+
+  .animate-rocket-launch {
+    @apply inline-block;
+    animation: rocket-launch 2.5s ease-in-out infinite;
+    transform-origin: 70% 70%;
   }
 }
 
@@ -110,4 +156,23 @@ body {
   .dark .scrollbar-custom::-webkit-scrollbar-thumb:hover {
     background: rgba(80, 130, 210, 0.28);
   }
+
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px var(--input-bg) inset !important;
+  box-shadow: 0 0 0 1000px var(--input-bg) inset !important;
+  -webkit-text-fill-color: var(--input-text) !important;
+  color: var(--input-text) !important;
+  caret-color: var(--input-text) !important;
+  border-radius: 0.75rem;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
 }
