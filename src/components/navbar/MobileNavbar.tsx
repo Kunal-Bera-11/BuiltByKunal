@@ -10,8 +10,8 @@ export function MobileNavbar() {
 
     const navItems = [
         { id: 'home', icon: HomeIcon, label: 'Home', route: '/home' },
-        { id: 'work', icon: BriefcaseIcon, label: 'Work', route: '/home' },
-        { id: 'projects', icon: FolderIcon, label: 'Projects', route: '/home' },
+        { id: 'work', icon: BriefcaseIcon, label: 'Work', route: '/work' },
+        { id: 'projects', icon: FolderIcon, label: 'Projects', route: '#' },
         { id: 'contact', icon: EnvelopeIcon, label: 'Contact', route: '/contact' }
     ];
 
