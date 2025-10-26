@@ -107,6 +107,190 @@ body {
     animation: rocket-launch 2.5s ease-in-out infinite;
     transform-origin: 70% 70%;
   }
+
+  /* @keyframes cloud-float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+      opacity: 0.85;
+    }
+
+    50% {
+      transform: translateY(-3px);
+      opacity: 1;
+    }
+  }
+
+  .animate-cloud-float {
+    animation: cloud-float 4s ease-in-out infinite;
+  }
+
+  @keyframes lightning-strike {
+
+    0%,
+    100% {
+      transform: translate(0, 0) scale(0.9) rotate(0deg);
+      opacity: 0;
+      filter: brightness(1);
+    }
+
+    5% {
+      transform: translate(2px, 4px) rotate(25deg) scale(1);
+      opacity: 1;
+      filter: brightness(2);
+    }
+
+    8% {
+      transform: translate(6px, 14px) rotate(35deg) scale(1.1);
+      opacity: 1;
+      filter: brightness(2.5);
+    }
+
+    12% {
+      transform: translate(12px, 24px) rotate(45deg) scale(1.15);
+      opacity: 0.8;
+      filter: brightness(1.8);
+    }
+
+    18% {
+      transform: translate(16px, 34px) rotate(50deg) scale(0.95);
+      opacity: 0.5;
+    }
+
+    25%,
+    100% {
+      transform: translate(0, 0) scale(0.9) rotate(0deg);
+      opacity: 0;
+      filter: brightness(1);
+    }
+  }
+
+  .animate-lightning-strike {
+    display: inline-block;
+    animation: lightning-strike 2.8s ease-in-out infinite;
+    transform-origin: top left;
+  } */
+
+  @keyframes cloud-float {
+
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+      opacity: 0.9;
+    }
+
+    50% {
+      transform: translateY(-4px) scale(1.02);
+      opacity: 1;
+    }
+  }
+
+  .animate-cloud-float {
+    display: inline-block;
+    animation: cloud-float 4s ease-in-out infinite;
+  }
+
+  /* Cloud Sparkle Effect */
+  @keyframes cloud-sparkle {
+
+    0%,
+    100% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-cloud-sparkle {
+    display: inline-block;
+    animation: cloud-sparkle 2s ease-in-out infinite;
+  }
+
+  /* Natural Lightning Strike with Varying Angles */
+  @keyframes lightning-strike {
+
+    0%,
+    100% {
+      transform: translate(0, 0) scale(0) rotate(0deg);
+      opacity: 0;
+      filter: brightness(1) drop-shadow(0 0 0px rgba(250, 204, 21, 0));
+    }
+
+    /* First flash - appears */
+    3% {
+      transform: translate(1px, 2px) rotate(38deg) scale(0.7);
+      opacity: 1;
+      filter: brightness(2.5) drop-shadow(0 0 8px rgba(250, 204, 21, 0.8));
+    }
+
+    /* Strike path - natural zigzag */
+    6% {
+      transform: translate(4px, 8px) rotate(42deg) scale(0.85);
+      opacity: 1;
+      filter: brightness(2.2) drop-shadow(0 0 6px rgba(250, 204, 21, 0.7));
+    }
+
+    9% {
+      transform: translate(7px, 14px) rotate(46deg) scale(0.95);
+      opacity: 1;
+      filter: brightness(2.8) drop-shadow(0 0 10px rgba(250, 204, 21, 0.9));
+    }
+
+    12% {
+      transform: translate(10px, 20px) rotate(44deg) scale(1);
+      opacity: 1;
+      filter: brightness(3) drop-shadow(0 0 12px rgba(250, 204, 21, 1));
+    }
+
+    15% {
+      transform: translate(13px, 26px) rotate(48deg) scale(1.05);
+      opacity: 0.9;
+      filter: brightness(2.5) drop-shadow(0 0 8px rgba(250, 204, 21, 0.8));
+    }
+
+    /* Second flash (optional aftershock) */
+    18% {
+      transform: translate(13px, 26px) rotate(48deg) scale(1.1);
+      opacity: 1;
+      filter: brightness(3) drop-shadow(0 0 14px rgba(250, 204, 21, 1));
+    }
+
+    /* Fade out */
+    21% {
+      transform: translate(15px, 30px) rotate(50deg) scale(0.9);
+      opacity: 0.6;
+      filter: brightness(1.8) drop-shadow(0 0 4px rgba(250, 204, 21, 0.6));
+    }
+
+    24% {
+      transform: translate(16px, 32px) rotate(51deg) scale(0.7);
+      opacity: 0.3;
+      filter: brightness(1.2) drop-shadow(0 0 2px rgba(250, 204, 21, 0.3));
+    }
+
+    27%,
+    100% {
+      transform: translate(0, 0) scale(0) rotate(0deg);
+      opacity: 0;
+      filter: brightness(1) drop-shadow(0 0 0px rgba(250, 204, 21, 0));
+    }
+  }
+
+  .animate-lightning-strike {
+    display: inline-block;
+    animation: lightning-strike 3.5s ease-in-out infinite;
+    transform-origin: top left;
+  }
+
+  /* Randomized delays for natural effect */
+  .animate-lightning-strike-delayed {
+    animation-delay: 0.8s;
+  }
 }
 
 @layer components {
