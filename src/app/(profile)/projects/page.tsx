@@ -1,3 +1,8 @@
+export const metadata = {
+    title: "Projects | Kunal Bera",
+    description: "Discover my hands-on technical projects — blending frontend engineering, backend logic, and AI automation for real-world results.",
+};
+
 
 export default function ProjectsPage() {
 

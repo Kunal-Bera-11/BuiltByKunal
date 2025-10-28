@@ -2,6 +2,11 @@ import Image from "next/image";
 import KunalImage from "@/assets/images/kunal_3D_image.png";
 import ActionButtons from "./_components/ActionButtons";
 
+export const metadata = {
+  title: "Home | Kunal Bera",
+  description: "Welcome to my portfolio — explore how I craft intelligent, scalable, and high-performance web experiences using Next.js, TypeScript, and Tailwind CSS.",
+};
+
 export default function HomePage() {
     return (
         <>

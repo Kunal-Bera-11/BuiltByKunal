@@ -1,5 +1,10 @@
 import ContactForm from "./_components/ContactForm";
 
+export const metadata = {
+    title: "Contact | Kunal Bera",
+    description: "Let’s connect — reach out to discuss projects, collaborations, or opportunities in frontend and full stack development.",
+};
+
 export default function ContactPage() {
     return (
         <>

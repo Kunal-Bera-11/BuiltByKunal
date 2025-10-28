@@ -1,4 +1,8 @@
-'use client';
+export const metadata = {
+    title: "Work | Kunal Bera",
+    description: "Explore my professional journey, key projects, and the impact I’ve created across enterprise and AI-driven platforms.",
+};
+
 export default function WorkPage() {
     const experiences = [
         {

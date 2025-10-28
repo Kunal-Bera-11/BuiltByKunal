@@ -55,10 +55,11 @@ export const metadata: Metadata = {
       "Crafting intuitive, scalable, and AI-driven web experiences using Next.js, TypeScript, and Tailwind CSS.",
     url: "https://built-by-kunal.vercel.app",
     siteName: "Kunal Bera Portfolio",
+    locale: "en_IN", // 🇮🇳 Indian English locale
     type: "website",
     images: [
       {
-        url: "public/images/kunal_3D_image.png", // replace this with your actual OG image path
+        url: "/images/kunal_3D_image.png", // replace this with your actual OG image path
         width: 1200,
         height: 630,
         alt: "Preview of Kunal Bera’s Portfolio Website"
