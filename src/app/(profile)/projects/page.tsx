@@ -249,7 +249,7 @@ End-to-end onboarding system for multiple entity types with dynamic validation, 
                             </span>
                         </h1>
                         <p className="text-[0.75rem] leading-[1.5] sm:text-[20px] sm:leading-[1.5] font-medium text-[#475569] dark:text-[#CBD5E1]">
-                            A collection of projects and proof-of-concepts I&apos;ve developed — combining intuitive UI, robust logic, and measurable impact across AI, SaaS, and enterprise platforms.
+                            A collection of projects and proof-of-concepts I&apos;ve developed combining intuitive UI, robust logic, and measurable impact across AI, SaaS, and enterprise platforms.
                         </p>
                     </div>
                 </div>
@@ -354,7 +354,7 @@ End-to-end onboarding system for multiple entity types with dynamic validation, 
 
                 <div className="w-full sm:max-w-5xl sm:mx-auto text-center">
                     <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.6] font-medium text-[#0F172A] dark:text-[#F8FAFC] italic">
-                        &quot;From concept to code — I help turn ideas into fast, scalable, and beautiful web products.&quot;
+                        &quot;From concept to code, I help turn ideas into fast, scalable, and beautiful web products.&quot;
                     </p>
                 </div>
 

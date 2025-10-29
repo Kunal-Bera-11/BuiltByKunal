@@ -68,8 +68,7 @@ export default function WorkPage() {
                             </span>
                         </h1>
                         <p className="text-[0.75rem] leading-[1.5] sm:text-[20px] sm:leading-[1.5] font-medium text-[#475569] dark:text-[#CBD5E1]">
-                            Over the past 2+ years, I&apos;ve contributed to 7+ production-grade platforms and multiple POCs —
-                            developing AI-driven, scalable interfaces that elevate performance, reliability, and user experience across modern web ecosystems.
+                            Over the past 2+ years, I&apos;ve contributed to 7+ production-grade platforms and multiple POCs, developing AI-driven, scalable interfaces that elevate performance, reliability, and user experience across modern web ecosystems.
                         </p>
                     </div>
                 </div>
@@ -132,7 +131,7 @@ export default function WorkPage() {
 
                 <div className="w-full sm:max-w-5xl sm:mx-auto text-center">
                     <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.6] font-medium text-[#0F172A] dark:text-[#F8FAFC] italic">
-                        &quot;Every project I&apos;ve worked on has reinforced one goal — to make web experiences faster, smarter, and more human.&quot;
+                        &quot;Every project I&apos;ve worked on has reinforced one goal to make web experiences faster, smarter, and more human.&quot;
                     </p>
                 </div>
 

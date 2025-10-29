@@ -21,7 +21,7 @@ export default function ContactPage() {
                                     I&apos;m open to frontend & full stack roles, collaborations, and creative ideas.
                                 </h2>
                                 <p className="text-[0.75rem] leading-[1.5] sm:text-[20px] sm:leading-[1.5] font-medium text-[#475569] dark:text-[#CBD5E1]">
-                                    Whether you&apos;re hiring, collaborating, or just saying hi — feel free to reach out.
+                                    Whether you&apos;re hiring, collaborating, or just saying hi, feel free to reach out.
                                     I&apos;m currently available for opportunities where I can help build seamless,
                                     high-performance digital experiences.
                                 </p>

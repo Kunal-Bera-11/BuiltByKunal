@@ -23,7 +23,7 @@ export default function HomePage() {
                                     Frontend Developer building real-time, scalable, and intuitive web experiences.
                                 </h2>
                                 <p className="text-[20px] leading-[1.5] font-medium text-[#475569] dark:text-[#CBD5E1]">
-                                    I create high-performance, visually engaging applications using Next.js, React, and Angular — turning complex ideas into fast, user-friendly products.
+                                    I create high-performance, visually engaging applications using Next.js, React, and Angular, turning complex ideas into fast, user-friendly products.
                                 </p>
                             </div>
 
@@ -39,7 +39,7 @@ export default function HomePage() {
                                     </div>
                                     <div className="w-full text-center p-3 rounded-xl bg-[#F1F5F9] dark:bg-[#334155]/40">
                                         <div className="text-[28px] font-bold text-[#10B981] dark:text-[#34D399]">~90%</div>
-                                        <div className="text-[13px] text-[#64748B] dark:text-[#94A3B8] font-medium">Satisfaction</div>
+                                        <div className="text-[13px] text-[#64748B] dark:text-[#94A3B8] font-medium">Success Rate</div>
                                     </div>
                                 </div>
                                 <ActionButtons />
@@ -85,7 +85,7 @@ export default function HomePage() {
                             Frontend Developer building real-time, scalable, and intuitive web experiences.
                         </h2>
                         <p className="text-[0.75rem] leading-[1.5] font-medium text-[#475569] dark:text-[#CBD5E1]">
-                            I create high-performance, visually engaging applications using Next.js, React, and Angular — turning complex ideas into fast, user-friendly products.
+                            I create high-performance, visually engaging applications using Next.js, React, and Angular, turning complex ideas into fast, user-friendly products.
                         </p>
                     </div>
 
@@ -101,7 +101,7 @@ export default function HomePage() {
                             </div>
                             <div className="w-full text-center p-3 rounded-xl bg-[#F1F5F9] dark:bg-[#334155]/40">
                                 <div className="text-[1.5rem] font-bold text-[#10B981] dark:text-[#34D399]">~90%</div>
-                                <div className="text-[0.7rem] text-[#64748B] dark:text-[#94A3B8] font-medium">Satisfaction</div>
+                                <div className="text-[0.7rem] text-[#64748B] dark:text-[#94A3B8] font-medium">Success Rate</div>
                             </div>
                         </div>
                         <ActionButtons />
