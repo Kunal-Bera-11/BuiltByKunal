@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { MobileNavbar } from "@/components/navbar/MobileNavbar";
 import { DesktopNavbar } from "@/components/navbar/DesktopNavbar";
+import Providers from "@/components/providers/Providers";
+import ThemeToggle from "@/components/custom/ThemeToggle";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -69,26 +71,40 @@ export const metadata: Metadata = {
 };
 
 
+function ThemeToggleWrapper() {
+  return (
+    <>
+      <div className="hidden sm:block fixed top-6 right-8 z-50">
+        <ThemeToggle />
+      </div>
+      <div className="block sm:hidden fixed bottom-[86px] right-6 z-50">
+        <ThemeToggle />
+      </div>
+    </>
+  );
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`w-[100dvw] h-[100dvh] m-0 p-0`}
-      >
-        <div className="w-full h-full bg-[#F1F5F9] dark:bg-[#0F172A] scrollbar-custom">
-          <div className="w-full h-[100px] hidden sm:flex justify-center py-4">
-            <DesktopNavbar />
+    <html lang="en" suppressHydrationWarning>
+      <body className="w-[100dvw] h-[100dvh] m-0 p-0">
+        <Providers>
+          <div className="w-full h-full bg-[#F1F5F9] dark:bg-[#0F172A] scrollbar-custom">
+            <div className="w-full h-[100px] hidden sm:flex justify-center py-4">
+              <DesktopNavbar />
+            </div>
+            <main className="w-full sm:h-[calc(100%-100px)] h-[calc(100%-70px)] overflow-y-auto">{children}</main>
+            <div className="w-full h-[70px] sm:hidden">
+              <MobileNavbar />
+            </div>
+            <ThemeToggleWrapper />
           </div>
-          <main className="w-full sm:h-[calc(100%-100px)] h-[calc(100%-70px)] overflow-y-auto">{children}</main>
-          <div className="w-full h-[70px] sm:hidden">
-            <MobileNavbar />
-          </div>
-        </div>
+        </Providers>
       </body>
-    </html >
+    </html>
   );
 }
