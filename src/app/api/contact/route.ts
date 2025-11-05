@@ -1,6 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongodbConfig';
 import ContactMessage from './_model';
+import type { PaginateModel, Document } from 'mongoose';
+
+interface IContactMessage extends Document {
+    name: string;
+    email: string;
+    message: string;
+    status: string;
+    ipAddress?: string;
+    userAgent?: string;
+    createdAt: Date;
+    updatedAt: Date;
+}
 
 export async function GET(request: NextRequest) {
     try {
@@ -10,7 +22,7 @@ export async function GET(request: NextRequest) {
         const page = parseInt(searchParams.get('page') || '1');
         const limit = parseInt(searchParams.get('limit') || '10');
 
-        const result = await (ContactMessage as any).paginate(
+        const result = await (ContactMessage as PaginateModel<IContactMessage>).paginate(
             {},
             {
                 page,
