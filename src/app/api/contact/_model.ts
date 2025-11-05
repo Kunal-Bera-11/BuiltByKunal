@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import mongoosePaginate from 'mongoose-paginate-v2';
 
 const ContactMessageSchema = new mongoose.Schema(
   {
@@ -36,6 +37,8 @@ const ContactMessageSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+
+ContactMessageSchema.plugin(mongoosePaginate);
 
 ContactMessageSchema.index({ createdAt: -1 });
 ContactMessageSchema.index({ status: 1 });

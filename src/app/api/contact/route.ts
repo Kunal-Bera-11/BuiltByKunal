@@ -2,6 +2,49 @@ import { NextRequest, NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongodbConfig';
 import ContactMessage from './_model';
 
+export async function GET(request: NextRequest) {
+    try {
+        await dbConnect();
+
+        const { searchParams } = new URL(request.url);
+        const page = parseInt(searchParams.get('page') || '1');
+        const limit = parseInt(searchParams.get('limit') || '10');
+
+        const result = await (ContactMessage as any).paginate(
+            {},
+            {
+                page,
+                limit,
+                sort: { createdAt: -1 },
+                select: '-__v',
+                lean: true
+            }
+        );
+
+        return NextResponse.json(
+            {
+                success: true,
+                data: result.docs,
+                pagination: {
+                    totalDocs: result.totalDocs,
+                    page: result.page,
+                    limit: result.limit,
+                    totalPages: result.totalPages,
+                    hasNextPage: result.hasNextPage,
+                    hasPrevPage: result.hasPrevPage
+                }
+            },
+            { status: 200 }
+        );
+    } catch (error: unknown) {
+        console.error('Get contacts error:', error);
+        return NextResponse.json(
+            { success: false, error: 'Failed to fetch messages' },
+            { status: 500 }
+        );
+    }
+}
+
 export async function POST(request: NextRequest) {
     try {
         await dbConnect();
@@ -126,3 +169,5 @@ export async function POST(request: NextRequest) {
         );
     }
 }
+
+
